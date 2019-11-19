@@ -1,11 +1,8 @@
 <?php
 
-    abstract class molde{
-        //atributos
-        
+    abstract class molde{        
         //metodos
         abstract public function ingresar_nombre($nombre);
-
         abstract public function obtener_nombre();
     }
     
@@ -19,15 +16,14 @@
         {
             echo $this -> mensaje;
         }
-
         public function ingresar_nombre($nombre,$username = ' la massa')
         {
-           $this -> nombre = $nombre . $username;  
+            $this -> nombre = $nombre . $username;  
         }
 
         public function obtener_nombre()
         {
-           echo " el nombre es del alumno es: " .$this -> nombre; 
+            echo " el nombre es del alumno es: " .$this -> nombre; 
         }
     }
 
