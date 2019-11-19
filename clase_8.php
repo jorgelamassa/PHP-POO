@@ -20,9 +20,9 @@
             echo $this -> mensaje;
         }
 
-        public function ingresar_nombre($nombre)
+        public function ingresar_nombre($nombre,$username = ' la massa')
         {
-           $this -> nombre = $nombre;  
+           $this -> nombre = $nombre . $username;  
         }
 
         public function obtener_nombre()
