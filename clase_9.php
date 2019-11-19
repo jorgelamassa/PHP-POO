@@ -1,9 +1,11 @@
 <?php
-
+$_GET['action'];
 function autoload($clase){
-    include "clases/". $clase .".php";   
+    include $_GET['action']."/". $clase .".php";   
 }
 
 spl_autoload_register('autoload');
-personas::mostrar("clase php poo");
+auto::mostrar("clase php poo");
+personas::mostrar("alumno la massa jorge");
+
 ?>
