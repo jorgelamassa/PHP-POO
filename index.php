@@ -2,9 +2,11 @@
     // PHP Orientado a Objetos - Metodos & Atributos
     /* en la programacion orineta a objtos todo se define como un objeto; 
     un objeto se define como una clase "la clase sera como el molde del objeto" que pose atributos y metodos
-    ejemplo
+    ========================================================================================================
+    ejemplo;
     las personas son objetos ahora los atributos de la persona son nombre,edad,sexo y 
-    los metodos son las acciones que puede realizar las personas com hablar caminar comer saludar */
+    los metodos son las acciones que puede realizar las personas com hablar caminar comer saludar
+     */
     // como en el ejemplo todo se define como un objeto y un objeto tiene de molde la clases 
     class usarios{
         //Atributos como nos dice la POO son propiedades que propiedades que posee un objeto

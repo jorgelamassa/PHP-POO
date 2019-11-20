@@ -1,10 +1,12 @@
 <?php   
     // PHP Orientado a Objetos - Constructores & Destructores
     /* en la programacion orientada a objetos todo se define como un objeto,
-     "la clase sera como el molde del objeto" que pose atributos y metodos
-    ejemplo
+    "la clase sera como el molde del objeto" que pose atributos y metodos
+    ========================================================================================================
+    ejemplo:
     realizar un app tipo loteria donde indicaremos un numero aleatorio y la cantida de intentos
-    esta debo mostrar los intentos y al final debe mostrar un msj si gano o no el corcunsante */
+    esta debo mostrar los intentos y al final debe mostrar un msj si gano o no el corcunsante 
+    */
     // como en el ejemplo todo se define como un objeto y un objeto tiene clases
     // en este caso el objeto sera un curso y el model sera la clase alumnos.   
     class loteria
@@ -23,7 +25,6 @@
             $this -> numero = $numero;
             $this -> intentos = $intentos;
         }
-
         public function sortear()
         {
             $minimo = $this -> numero/2;
@@ -34,7 +35,6 @@
                 self::intentos($int);
             }
         }
-
         public function intentos($int)
         {
             if($int == $this -> numero)
@@ -52,38 +52,20 @@
         {
             if( $this -> resultados)
             {
-                echo "felicidades ganaste en :". $this -> intentos ."intentos" ;
+                echo "<b>felicidades ganaste en :". $this -> intentos ."intentos</b>" ;
             }
             else
             {
-                echo "lastima no ganaste lo has intentado  :". $this -> intentos ;
+                echo "<b>lastima no ganaste lo has intentado  :". $this -> intentos ."</b>";
             }
         }
     }
 
-/*recuerden que las class funcionan con los moldes para un objeto. 
-los objetos tiende a estar guardodo en variable y la palabra reservada php new 
-y la cual le vamos asignar la class*/
-$loteria = new loteria(10,10); 
-/* ya una vez intanciada la class en la varieble del objeto se puede acceder a sus atributos
-teniedo en cuenta si es public private protecte*/
-$loteria -> sortear();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /*recuerden que las class funcionan con los moldes para un objeto. 
+    los objetos tiende a estar guardodo en variable y la palabra reservada php new 
+    y la cual le vamos asignar la class*/
+    $loteria = new loteria(10,10); 
+    /* ya una vez intanciada la class en la varieble del objeto se puede acceder a sus atributos
+    teniedo en cuenta si es public private protecte*/
+    $loteria -> sortear();
 ?>
