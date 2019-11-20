@@ -1,5 +1,5 @@
 <?php
-
+//PHP Orientado a Objetos - Autoload
 class auto{
     //metodo
     public function mostrar($mensaje){
