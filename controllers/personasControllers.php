@@ -1,4 +1,5 @@
-<?php
+<?php 
+namespace controllers; 
     /* PHP Orientado a Objetos - Namespaces
     =====================================================================================================
     namespaces: nos ayudan a colocar "sub nombres"  a nuestros archivos clases o funciones 
@@ -6,27 +7,13 @@
     y por ello teniamos coalision
     namespace models;  asi declaramos un namespace se debe colocar antes de codigo php o html
     */ 
-    //require_once  ("models/personas.php");
-    //require_once  ("controllers/personasControllers.php");
 
-
-    spl_autoload_register(function($clase)
+    //creamos el metodo
+    class personasControllers
     {
-        //$ruta = "models/".$clase;
-        $ruta = str_replace('\\',"/",$clase).".php";
-        //echo $ruta;
-        if (is_readable($ruta))
+        public static function hola()
         {
-            require_once $ruta;
+            echo "hola soy la persona del personasController.";
         }
-        else
-        {
-            echo $ruta;  
-        }
-    });
-
-    models\personas::hola();
-    controllers\personasControllers::hola();
-
-    
+    }
 ?> 
