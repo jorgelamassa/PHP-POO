@@ -11,8 +11,8 @@
     // en este caso el objeto sera un curso y el model sera la clase alumnos.   
     class loteria
     {
-    //atributos como nos dice ele ejemplo nos pide que indiquemos un numero y la cantida 
-    //de intentosque realizara y resultado
+    /*atributos como nos dice ele ejemplo nos pide que indiquemos un numero y la cantida 
+    de intento sque realizara y resultado */
     public $numero;
     public $intentos;
     public $resultados = False;

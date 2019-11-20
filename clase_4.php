@@ -20,10 +20,10 @@
     ========================================================================================================    
     */
     /* como en el ejemplo todo se define como un objeto y un objeto tiene clases
-     en este caso el objeto sera un curso y el model sera la clase alumnos.  */
+     en este caso el objeto sera un curso y el model sera la clase FACEBOOK.  */
     class user_facebook{
 
-    //atributos
+    //atributos 
     public $nombre;
     public $apellido;
     public $edad;
