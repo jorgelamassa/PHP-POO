@@ -7,7 +7,7 @@ namespace controllers;
     y por ello teniamos coalision
     namespace models;  asi declaramos un namespace se debe colocar antes de codigo php o html
     */ 
-
+//tes
     //creamos el metodo
     class personasControllers
     {
