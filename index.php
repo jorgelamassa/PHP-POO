@@ -29,6 +29,7 @@
         echo "<a  href='clase_9.php' alt='clase_9' title='clase_9'> clase 9 </a>"."<br>";
         echo "<a  href='clase_10.php' alt='clase_10' title='clase_10'> clase 10 </a>"."<br>";
         echo "<a  href='clase_11.php' alt='clase_11' title='clase_11'> clase 11 </a>"."<br>";
+        echo "<a  href='proyecto/index.php' alt='Proyecto' title='Proyecto'> Proyecto </a>"."<br>";
         }
         
     }
