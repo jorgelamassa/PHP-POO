@@ -1,38 +1,39 @@
-<?php namespace models;
-/*PHP Orientado a Objetos - Creación de nuestros modelos
-========================================================================================================
-Lenguaje de definición de datos (DDL)
-Las sentencias DDL se utilizan para crear y modificar la estructura 
-de las tablas así como otros objetos de la base de datos.
+<?php
+    namespace models;
+    /*PHP Orientado a Objetos - Creación de nuestros modelos
+    ========================================================================================================
+    Lenguaje de definición de datos (DDL)
+    Las sentencias DDL se utilizan para crear y modificar la estructura 
+    de las tablas así como otros objetos de la base de datos.
 
-CREATE - para crear objetos en la base de datos.
-ALTER - modifica la estructura de la base de datos.
-DROP - borra objetos de la base de datos.
-TRUNCATE - elimina todos los registros de la tabla, incluyendo todos los espacios asignados a los registros.
-========================================================================================================
-Lenguaje de manipulación de datos (DML)
-Las sentencias de lenguaje de manipulación de datos (DML)
- son utilizadas para gestionar datos dentro de los schemas. Algunos ejemplos:
+    CREATE - para crear objetos en la base de datos.
+    ALTER - modifica la estructura de la base de datos.
+    DROP - borra objetos de la base de datos.
+    TRUNCATE - elimina todos los registros de la tabla, incluyendo todos los espacios asignados a los registros.
+    ========================================================================================================
+    Lenguaje de manipulación de datos (DML)
+    Las sentencias de lenguaje de manipulación de datos (DML)
+    son utilizadas para gestionar datos dentro de los schemas. Algunos ejemplos:
 
-SELECT - para obtener datos de una base de datos.
-INSERT - para insertar datos a una tabla.
-UPDATE - para modificar datos existentes dentro de una tabla.
-DELETE - elimina todos los registros de la tabla; no borra los espacios asignados a los registros.
-========================================================================================================
-En la programacion orientada a objetos todo se define como un objeto,
-un objeto se define como una clase "la clase sera como el molde del objeto" 
-que pose atributos y metodos
-========================================================================================================*/
-// la clase conexion nos permitira realizar la conexion a la bd
+    SELECT - para obtener datos de una base de datos.
+    INSERT - para insertar datos a una tabla.
+    UPDATE - para modificar datos existentes dentro de una tabla.
+    DELETE - elimina todos los registros de la tabla; no borra los espacios asignados a los registros.
+    ========================================================================================================
+    En la programacion orientada a objetos todo se define como un objeto,
+    un objeto se define como una clase "la clase sera como el molde del objeto" 
+    que pose atributos y metodos
+    ========================================================================================================*/
+    // la clase conexion nos permitira realizar la conexion a la bd
     class conexion
     {
         //atributos DATOS PARA LA CONEXION A LA BD
         private $datos = array
         (
             "host"=>"localhost",
-            "user"=>"root",
-            "pass"=>"proyecto_php_poo",
-            "db"=>""
+            "user"=>"bd_poo",
+            "pass"=>"bd_poo",
+            "db"=>"proyecto_php_poo"
         );
         //atributos para la conexion
         private $con;
