@@ -1,5 +1,4 @@
-<?php 
-namespace models;
+<?php namespace models;
 // PHP Orientado a Objetos - Creación de nuestros modelos
     class seccion{
         // ATRIBUTOS
@@ -48,7 +47,7 @@ namespace models;
         //METODO ACTUALIZA UNA SECCION
         public function UPDATE_seccion()
         {
-            $sql = "UPDATE FROM secciones 
+            $sql = "UPDATE secciones 
             SET nombre_seccion = '{$this -> nombre_seccion}',
             WHERE id_seccion = '{$this -> id_seccion}'";
             $this -> con -> consulta_simple($sql);

@@ -1,5 +1,4 @@
-<?php
-    namespace models;
+<?php namespace models;
     /*PHP Orientado a Objetos - Creación de nuestros modelos
     ========================================================================================================
     Lenguaje de definición de datos (DDL)
