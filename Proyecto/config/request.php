@@ -32,12 +32,11 @@
                 $ruta = array_filter($ruta);
                 if($ruta[0] == "index.php")
                 {
-                    $this -> controlador = "estudiante";
+                    $this -> controlador = "estudiantes";
                 }
                 else
                 {
                 // para imprimir el array que creamos  print_r($ruta);
-                print_r($ruta);
                 $this -> controlador = \strtolower(array_shift($ruta));
                 }
                 
@@ -47,6 +46,13 @@
                     $this -> metodo = "index";
                 }
                 $this -> argumento = $ruta;
+            }
+            // este else es para si estamo situdos en indes darle valor a l controlador
+            // y metodo para q funcione en el index
+            else 
+            {
+                $this->controlador = "estudiantes";
+                $this->metodo = "index";
             }
         }
     /*==============================================================================*/
