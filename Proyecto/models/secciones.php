@@ -1,6 +1,6 @@
 <?php namespace models;
 // PHP Orientado a Objetos - Creación de nuestros modelos
-    class seccion{
+    class secciones{
         // ATRIBUTOS
         private $id_seccion;
         private $nombre_seccion;

@@ -26,16 +26,27 @@ class enrutador
         {
             require_once ($ruta);
             $mostrar = "controller\\" . $controlador;
-            print $mostrar;
+            //print $mostrar;
             $controlador = new $mostrar;
             if (!isset($argumento))
             {
-                \call_user_func(array($controlador,$metodo));
+                $datos = \call_user_func(array($controlador,$metodo));
             }
             else
             {
-                \call_user_func(array($controlador,$metodo),$argumento);
+                $datos = \call_user_func(array($controlador,$metodo),$argumento);
             }
+        }
+
+        // cargar vista
+        $ruta = ROOT."view".DS.$request-> get_controller().DS.$request->get_metodo().".php";
+        
+        if(is_readable ($ruta))
+        {
+            require_once $ruta;
+        }
+        else{
+            echo "404 Not Found: el archivo no esta en la ruta o no exite =  ".$ruta;
         }
     }
 }

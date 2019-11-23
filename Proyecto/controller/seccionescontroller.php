@@ -1,12 +1,18 @@
 <?php namespace controller;
-
-class seccionescontroller 
-{
-    public function index()
+    use models\secciones as secciones;
+    class seccionescontroller 
     {
-        print "hola soy el index del secciones";
+        //atributos
+        private $seciones;
+        //metodos
+        public function __construct()
+        {
+            $this -> seciones = new secciones();
+        }
+        public function index()
+        {
+            $datos = $this -> seciones -> listar_secciones();
+            return $datos;
+        }   
     }
-
-}
-
 ?>

@@ -46,7 +46,7 @@
         {
             $sql = "INSERT INTO estudiantes (id_estudiante,nombre_studen,fecha_nacimiento_studen, promedio_studen,imagen_studen,id_seccion,fecha_registro_studen )
             VALUES
-                ( null, '{$this -> nombre}', '{$this -> fecha_nacimiento_studen}', '{$this -> promedio_studen}', '{$this -> imagen_studen}', '{$this -> id_seccion}',NOW())";
+                ( null, '{$this -> nombre_studen}', '{$this -> fecha_nacimiento_studen}', '{$this -> promedio_studen}', '{$this -> imagen_studen}', '{$this -> id_seccion}',NOW())";
             $this -> con -> consulta_simple($sql);
         }
         //METODO ELIMINA UN ESTUDIANTE
