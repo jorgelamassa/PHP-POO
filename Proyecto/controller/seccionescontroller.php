@@ -14,5 +14,15 @@
             $datos = $this -> seciones -> listar_secciones();
             return $datos;
         }   
+
+        public function agregar()
+        {
+            if($_POST)
+            {
+                $this->seciones->set("nombre_seccion", $_POST['nombre_seccion']);
+                $this->seciones->add_seccion();
+                header("Location: " . URL . "secciones");
+            }
+        }
     }
 ?>

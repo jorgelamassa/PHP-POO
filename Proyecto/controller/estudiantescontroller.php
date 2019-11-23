@@ -26,11 +26,11 @@ class estudiantescontroller
         }else
         {
             $permitidos = array("image/jpeg", "image/png", "image/gif", "image/jpg");
-            $limite = 700;
+            $limite = 5000;
             if(in_array($_FILES['imagen']['type'], $permitidos) && $_FILES['imagen']['size'] <= $limite * 5000)
             {
                 $nombre = date('is') . $_FILES['imagen']['name'];
-                $ruta = "Views" . DS . "template". DS . "img"  . DS . $nombre;
+                $ruta = "view" . DS . "template". DS . "img"  . DS . $nombre;
                 move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta);
                 $this->estudiante->set("nombre_studen", $_POST['nombre']);
                 $this->estudiante->set("fecha_nacimiento_studen", $_POST['edad']);
