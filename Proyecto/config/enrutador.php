@@ -19,6 +19,7 @@ class enrutador
             $metodo = "index";
         }
         // le pasamos a argumento lo que recibimos de resquest del metodo get_argumento
+        
         $argumento = $request -> get_argumento();
         //print "argumento:".$argumento;
         // si la el archivo es leible que nos indica la ruta creada lo requerimos 
@@ -46,7 +47,7 @@ class enrutador
             require_once $ruta;
         }
         else{
-            echo "404 Not Found: el archivo no esta en la ruta o no exite =  ".$ruta;
+            print "No se encontro la ruta:".$ruta;
         }
     }
 }

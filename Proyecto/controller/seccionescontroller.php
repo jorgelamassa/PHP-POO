@@ -24,5 +24,29 @@
                 header("Location: " . URL . "secciones");
             }
         }
+
+
+        public function editar($id_seccion)
+        {
+            if ($_POST)
+                {   
+                    $this->seciones->set("id_seccion",$id_seccion);
+                    $this->seciones->set("nombre_seccion", $_POST['nombre_seccion']);
+                    $this->seciones->UPDATE_seccion();
+                    header("Location: " . URL . "secciones");
+                }else 
+                {
+                    $this -> seciones -> set("id_seccion",$id_seccion); 
+                    $datos = $this -> seciones -> view_seccion();
+                    return $datos;
+                }
+        }
+
+        public function eliminar($id_seccion)
+        {
+            $this->seciones->set("id_seccion",$id_seccion); 
+            $this->seciones->DELETE_seccion();
+            header("Location: " . URL . "secciones"); 
+        }
     }
 ?>

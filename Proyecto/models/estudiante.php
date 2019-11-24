@@ -53,18 +53,19 @@
         public function DELETE_studen()
         {
             $sql = "DELETE FROM estudiantes WHERE id_estudiante = '{$this -> id_estudiante}'";
+            echo $sql;
             $this -> con -> consulta_simple($sql);
         }
         //METODO ACTUALIZA UN ESTUDIANTE
         public function UPDATE_studen()
         {
-            $sql = "UPDATE FROM estudiantes 
+            $sql = "UPDATE   estudiantes 
             SET nombre_studen = '{$this -> nombre_studen}',
-                fecha_nacimiento_studen = '{$this -> nombre_studen},
-                promedio_studen = '{$this -> promedio_studen},
-                imagen_studen = '{$this -> imagen_studen},
-                id_seccion = '{$this -> id_seccion},
-            WHERE id_estudiante = '{$this -> id_estudiante}'";
+                fecha_nacimiento_studen = '{$this -> fecha_nacimiento_studen}',
+                promedio_studen = '{$this -> promedio_studen}',
+                id_seccion = '{$this -> id_seccion}'
+            WHERE id_estudiante = '{$this->id_estudiante}'";
+            //echo $sql;
             $this -> con -> consulta_simple($sql);
         }
         //METODO QUE MUESTRA UN  ESTUDIANTE EN ESPECIFICO
@@ -76,7 +77,7 @@
             FROM
             estudiantes AS a
             INNER JOIN secciones AS b ON a.id_seccion = b.id_seccion
-            WHERE id_estudiante = '{$this -> id_estudiante}'";
+            WHERE id_estudiante = '{$this->id_estudiante}'";
             //echo $sql;
             $datos = $this -> con -> consulta_retorno($sql);
             $row = \mysqli_fetch_assoc($datos);

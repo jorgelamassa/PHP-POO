@@ -45,7 +45,8 @@
                 {
                     $this -> metodo = "index";
                 }
-                $this -> argumento = $ruta;
+                $this->argumento = (count($ruta) === 1) ? $ruta[0] : NULL;
+
             }
             // este else es para si estamo situdos en indes darle valor a l controlador
             // y metodo para q funcione en el index

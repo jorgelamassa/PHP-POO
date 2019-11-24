@@ -41,15 +41,16 @@
         //METODO ELIMINA UNA SECCION
         public function DELETE_seccion()
         {
-            $sql = "DELETE FROM secciones WHERE id_seccion = '{$this -> nombre_seccion}'";
+            $sql = "DELETE FROM secciones WHERE id_seccion = '{$this -> id_seccion}'";
             $this -> con -> consulta_simple($sql);
         }
         //METODO ACTUALIZA UNA SECCION
         public function UPDATE_seccion()
         {
             $sql = "UPDATE secciones 
-            SET nombre_seccion = '{$this -> nombre_seccion}',
+            SET nombre_seccion = '{$this -> nombre_seccion}'
             WHERE id_seccion = '{$this -> id_seccion}'";
+            //echo $sql;
             $this -> con -> consulta_simple($sql);
         }
         // METODO QUE MUESTRA UNA SECCION  EN ESPECIFICO
@@ -57,8 +58,9 @@
         {
             $sql = " SELECT a.*
             FROM
-            secciones AS b
+            secciones AS a
             WHERE id_seccion = '{$this -> id_seccion}'";
+            //echo $sql;
             $datos = $this -> con -> consulta_retorno($sql);
             $row = \mysqli_fetch_assoc($datos);
             return $row;
